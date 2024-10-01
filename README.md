@@ -44,14 +44,6 @@ AttriMIL achieves the state-of-the-art performance on four benchmarks, showcasin
     </em>
 </p>
 
-
-<p align="center">
-    <img src="./visualization/Visualization.png"/ width="800"> <br />
-    <em> 
-    Figure 4. Qualitative comparison of the state-of-the-art WSI classification algorithms.
-    </em>
-</p>
-
 ## 2. Quick Start
 ### 2.1 Installation
 AttriMIL is extended from [CLAM]([https://github.com/microsoft/CvT](https://github.com/mahmoodlab/CLAM)).Assuming that you have installed PyTorch and TorchVision, if not, please follow the [officiall instruction](https://pytorch.org/) to install them firstly. 
@@ -94,6 +86,15 @@ Note that, the AttriMIL+DSMIL and AttriMIL+TransMIL will be released soon.
 ``` sh
 python tester_attrimil_abmil.py
 ```
+The visual results can directly capture the disease-positive regions, which is encouraging.
+
+<p align="center">
+    <img src="./visualization/Visualization.png"/ width="800"> <br />
+    <em> 
+    Figure 4. Qualitative comparison of the state-of-the-art WSI classification algorithms.
+    </em>
+</p>
+
 ## 3. Citation (will be updated soon)
 If you find this work or code is helpful in your research, please cite:
 
