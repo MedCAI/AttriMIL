@@ -46,7 +46,7 @@ AttriMIL achieves the state-of-the-art performance on four benchmarks, showcasin
 </p>
 
 ## 2. Quick Start
-### 2.1 Installation、
+### 2.1 Installation
 AttriMIL is extended from [CLAM]([https://github.com/microsoft/CvT](https://github.com/mahmoodlab/CLAM)).Assuming that you have installed PyTorch and TorchVision, if not, please follow the [officiall instruction](https://pytorch.org/) to install them firstly. 
 Intall the dependencies using cmd:
 ``` sh
