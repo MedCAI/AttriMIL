@@ -56,7 +56,7 @@ The code is developed and tested using pytorch 1.8.0. Other versions of pytorch 
 ### 2.2 Data preparation
 Data preparation based on CLAM, including tissue segmentation, patching, and feature extraction. In comparison to traditional process, we introduce a neiboorhood generation process and use pathology-adaptive learning for instance-level feature extraction.
 ``` sh
-python create_3coords.py  # too generate neighbor indices
+python create_3coords.py  # generate neighbor indices
 python coord_to_feature.py  # incorporate the indices to feature (h5) files
 ```
 The final data following the structure:
