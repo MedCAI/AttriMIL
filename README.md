@@ -27,3 +27,19 @@ Figure 2 presents an overview of AttriMIL, which comprises three main components
     Figure 2. Overview of the proposed AttriMIL. Given an input WSI, AttriMIL crops it into patches and utilizes a pathology adaptive backbone to obtain optimized instance embeddings. Next, it generates instance attribute scores for each category using a multi-branch attribute scoring mechanism. For a specific branch, WSIs of the same category are treated as positive, while WSIs of other categories are considered negative. During the training phase, attribute constraints are applied to enhance the network's perception of pathological attributes. Finally, AttriMIL performs score aggregation to obtain C bag scores, which are then used to generate bag prediction probabilities..
     </em>
 </p>
+
+### 1.3 Performance
+AttriMIL achieves the state-of-the-art performance on four benchmarks, showcasing the superior bag classification performance, generalization ability, and instance localization capability. Additionally, AttriMIL is capable of identifying bag with a small proportion of target regions.
+<p align="center">
+    <img src="./figures/Visualization.png"/ width="800"> <br />
+    <em> 
+    Figure 3. Qualitative comparison of the state-of-the-art WSI classification algorithms.
+    </em>
+</p>
+
+<p align="center">
+    <img src="./figures/ROCs.png"/ width="800"> <br />
+    <em> 
+    Table 1. Quantative comparison of the state-of-the-art WSI classification algorithms.
+    </em>
+</p>
