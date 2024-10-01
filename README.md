@@ -43,3 +43,14 @@ AttriMIL achieves the state-of-the-art performance on four benchmarks, showcasin
     Figure 4. Quantative comparison of the state-of-the-art WSI classification algorithms.
     </em>
 </p>
+
+## 2. Quick Start
+### 2.1 Installation、
+AttriMIL is extended from [CLAM]([https://github.com/microsoft/CvT](https://github.com/mahmoodlab/CLAM)).Assuming that you have installed PyTorch and TorchVision, if not, please follow the [officiall instruction](https://pytorch.org/) to install them firstly. 
+Intall the dependencies using cmd:
+``` sh
+conda env create -f env.yml
+```
+The code is developed and tested using pytorch 1.8.0. Other versions of pytorch are not fully tested.
+
+
