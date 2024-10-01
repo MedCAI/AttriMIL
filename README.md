@@ -24,7 +24,7 @@ Figure 2 presents an overview of AttriMIL, which comprises three main components
 <p align="center">
     <img src="./visualization/AttriMIL.png"/ width="800"> <br />
     <em> 
-    Figure 2. Overview of the proposed AttriMIL. Given an input WSI, AttriMIL crops it into patches and utilizes a pathology adaptive backbone to obtain optimized instance embeddings. Next, it generates instance attribute scores for each category using a multi-branch attribute scoring mechanism. For a specific branch, WSIs of the same category are treated as positive, while WSIs of other categories are considered negative. During the training phase, attribute constraints are applied to enhance the network's perception of pathological attributes. Finally, AttriMIL performs score aggregation to obtain C bag scores, which are then used to generate bag prediction probabilities..
+    Figure 2. Overview of the proposed AttriMIL.
     </em>
 </p>
 
