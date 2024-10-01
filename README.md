@@ -22,7 +22,7 @@ To overcome these issues, we propose a novel framework named attribute-aware mul
 Figure 2 presents an overview of AttriMIL, which comprises three main components: (1) a pathology adaptive backbone for extracting optimized instance-level features, (2) multi-branch attribute scoring mechanism with attribute constraints, and (3) score aggregation and bag prediction. In this section, we first revisit multiple instance learning and attention-based frameworks, followed by a detailed description of AttriMIL.
 
 <p align="center">
-    <img src="./visualization/AttriMIL.png"/ width="1000"> <br />
+    <img src="./visualization/AttriMIL.png"/ width="800"> <br />
     <em> 
     Figure 2. Overview of the proposed AttriMIL. Given an input WSI, AttriMIL crops it into patches and utilizes a pathology adaptive backbone to obtain optimized instance embeddings. Next, it generates instance attribute scores for each category using a multi-branch attribute scoring mechanism. For a specific branch, WSIs of the same category are treated as positive, while WSIs of other categories are considered negative. During the training phase, attribute constraints are applied to enhance the network's perception of pathological attributes. Finally, AttriMIL performs score aggregation to obtain C bag scores, which are then used to generate bag prediction probabilities..
     </em>
@@ -53,4 +53,36 @@ conda env create -f env.yml
 ```
 The code is developed and tested using pytorch 1.8.0. Other versions of pytorch are not fully tested.
 
+### 2.2 Data preparation
+Data preparation based on CLAM, including tissue segmentation, patching, and feature extraction. In comparison to traditional process, we introduce a neiboorhood generation process and use pathology-adaptive learning for instance-level feature extraction.
+``` sh
+python create_3coords.py  # too generate neighbor indices
+python coord_to_feature.py  # incorporate the indices to feature (h5) files
+```
+The final data following the structure:
+```bash
+FEATURES_DIRECTORY/
+    ├── h5_files
+            ├── slide_1.h5
+            ├── slide_2.h5
+            └── ...
+    └── pt_files
+            ├── slide_1.pt
+            ├── slide_2.pt
+            └── ...
+```
+where each .h5 file contains an array of extracted features along with their patch coordinates and neighbor indices.
 
+### 2.3 Pretrained Weights
+Pretrained weights are based on ResNet18 ImageNet, ResNet18 SimCLR. We follow [DSMIL](https://github.com/binli123/dsmil-wsi/tree/master) for generating the SSL features. Surely, you can also use other pre-trained models.
+
+### 2.4 Training and Testing
+Training your AttriMIL:
+``` sh
+python trainer_attrimil_abmil.py
+```
+Note that, the AttriMIL+DSMIL and AttriMIL+TransMIL will be released soon.
+
+``` sh
+python tester_attrimil_abmil.py
+```
