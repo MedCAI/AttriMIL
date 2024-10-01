@@ -86,3 +86,23 @@ Note that, the AttriMIL+DSMIL and AttriMIL+TransMIL will be released soon.
 ``` sh
 python tester_attrimil_abmil.py
 ```
+## 3. Citation (will be updated soon)
+If you find this work or code is helpful in your research, please cite:
+
+```
+@article{cai2024rethinking,
+  title={Rethinking Attention-Based Multiple Instance Learning for Whole-Slide Pathological Image Classification: An Instance Attribute Viewpoint},
+  author={Cai, Linghan and Huang, Shenjin and Zhang, Ye and Lu, Jinpeng and Zhang, Yongbing},
+  journal={arXiv preprint arXiv:2404.00351},
+  year={2024}
+}
+```
+
+## 4. Contributing
+Thanks to the following work for improving our project：
+- CLAM: [https://github.com/mahmoodlab/CLAM](https://github.com/mahmoodlab/CLAM)
+- DSMIL: [https://github.com/binli123/dsmil-wsi/tree/master](https://github.com/binli123/dsmil-wsi/tree/master)
+- MambaMIL: [https://github.com/isyangshu/MambaMIL](https://github.com/isyangshu/MambaMIL)
+
+## 5. License
+Distributed under the Apache 2.0 License. See LICENSE for more information.
