@@ -51,7 +51,7 @@ Intall the dependencies using cmd:
 ``` sh
 conda env create -f env.yml
 ```
-The code is developed and tested using pytorch 1.8.0. Other versions of pytorch are not fully tested.
+The code is developed and tested using pytorch 1.10.0. Other versions of pytorch are not fully tested.
 
 ### 2.2 Data preparation
 Data preparation based on CLAM, including tissue segmentation, patching, and feature extraction. In comparison to traditional process, we introduce a neiboorhood generation process and use pathology-adaptive learning for instance-level feature extraction.
