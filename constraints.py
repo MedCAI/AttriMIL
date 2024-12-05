@@ -10,7 +10,7 @@ from sklearn.metrics import auc as calc_auc
 
 def spatial_constraint(A, n_classes, nearest, ks=3):
     loss_spatial = torch.tensor(0.0).to(device)
-    N = A.shape[-1]
+    # N = A.shape[-1]
     for c in range(1, n_classes):
         score = A[:, c] # N
         nearest_score = score[nearest] # N ks^2-1
@@ -57,6 +57,5 @@ def rank_constraint(data, label, model, A, n_classes, label_positive_list, label
                     loss_rank = loss_rank + torch.clamp(torch.mean(value - Ah[0, c]), min=0.0) + torch.clamp(torch.mean(value), min=0.0)
                 else:
                     loss_rank = loss_rank + torch.clamp(torch.mean(value), min=0.0) + torch.clamp(torch.mean(-Ah[0, c]), min=0.0)
-
     loss_rank = loss_rank / n_classes
     return loss_rank, label_positive_list, label_negative_list
