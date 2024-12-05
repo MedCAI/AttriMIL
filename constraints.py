@@ -36,7 +36,7 @@ def rank_constraint(data, label, model, A, n_classes, label_positive_list, label
             else:
                 h = label_negative_list[c].get()
                 label_negative_list[c].put(h)
-                Ah, _, _, _ = model(h.detach())
+                _, _, _, Ah, _ = model(h.detach())
                 if c != 0:
                     loss_rank = loss_rank + torch.clamp(torch.mean(Ah[0, c] - value), min=0.0) + torch.clamp(torch.mean(-value), min=0.0) + torch.clamp(torch.mean(Ah[0, c]), min=0.0)
                 else:
@@ -52,7 +52,7 @@ def rank_constraint(data, label, model, A, n_classes, label_positive_list, label
             else:
                 h = label_positive_list[c].get()
                 label_positive_list[c].put(h)
-                Ah, _, _, _ = model(h.detach())
+                _, _, _, Ah, _ = model(h.detach())
                 if c != 0:
                     loss_rank = loss_rank + torch.clamp(torch.mean(value - Ah[0, c]), min=0.0) + torch.clamp(torch.mean(value), min=0.0)
                 else:
