@@ -82,7 +82,7 @@ class TransMIL(nn.Module):
         h0 = self.layer2(h) #[B, N+1, 512]
 
         #---->cls_token
-        h = self.norm(h)[:,0]
+        h = self.norm(h0)[:,0]
 
         #---->predict
         logits = self._fc2(h) #[B, n_classes]
