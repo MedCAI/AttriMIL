@@ -1,5 +1,5 @@
 # AttriMIL: Revisiting attention-based multiple instance learning for whole-slide pathological image classification from a perspective of instance attributes
-The official implementation of AttriMIL (Pending).
+The official implementation of AttriMIL (published at _Medical Image Analysis_).
 
 ## 1. Introduction
 ### 1.1 Background
