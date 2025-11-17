@@ -95,7 +95,7 @@ The visual results can directly capture the disease-positive regions, which is e
     </em>
 </p>
 
-## 3. Citation (will be updated soon)
+## 3. Citation
 If you find this work or code is helpful in your research, please cite:
 
 ```
