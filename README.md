@@ -99,11 +99,13 @@ The visual results can directly capture the disease-positive regions, which is e
 If you find this work or code is helpful in your research, please cite:
 
 ```
-@article{cai2024rethinking,
-  title={Rethinking Attention-Based Multiple Instance Learning for Whole-Slide Pathological Image Classification: An Instance Attribute Viewpoint},
+@article{cai2025attrimil,
+  title={AttriMIL: Revisiting attention-based multiple instance learning for whole-slide pathological image classification from a perspective of instance attributes},
   author={Cai, Linghan and Huang, Shenjin and Zhang, Ye and Lu, Jinpeng and Zhang, Yongbing},
-  journal={arXiv preprint arXiv:2404.00351},
-  year={2024}
+  journal={Medical Image Analysis},
+  pages={103631},
+  year={2025},
+  publisher={Elsevier}
 }
 ```
 
